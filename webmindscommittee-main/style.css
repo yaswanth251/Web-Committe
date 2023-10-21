@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.join{
+    padding: auto;
+    margin: 0;
+    width: 80%;
+    position: relative;
+    margin-left: 10%;
+    background:rgb(223, 192, 172);
+    border-radius: 2.5rem;
+}
+.heddings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heddings h1{
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-top: 1.7rem;
+    font-size: 2.5rem;
+}
+.heddings p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    margin-top: .5rem;
+}
+.apply-sec{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.selection{
+    border: 1px solid rgb(188, 28, 28);
+    box-shadow: 1px 3px 5px  rgb(228, 70, 2),1px 3px 5px  rgb(231, 42, 5);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+.selection:hover{
+    box-shadow: 1px 3px 5px  rgb(166, 3, 87),1px 3px 5px rgb(166,3,87);
+}
+.posts:hover{
+    box-shadow: 1px 3px 5px  black,1px 3px 5px transparent;
+}
+.posts{
+    border: .1px solid rgb(24, 6, 6);
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    box-shadow: 1px 3px 5px  rgb(165, 125, 6),1px 3px 5px  rgb(130, 3, 94);
+}
+.box a {
+    position: relative;
+    overflow: hidden;
+    width: 128px;
+    height: 49px;
+    text-decoration: none;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    transition: 1s;
+    background-color: rgb(204, 173, 173);
+    border-radius: 1rem;
+}
+
+.box a:hover {
+    box-shadow: 0px 0px 10px var(--clr),
+    0px 0px 30px var(--clr),
+    0px 0px 60px var(--clr), 
+    0px 0px 100px var(--clr);
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.box a::before {
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 150px;
+    background-color: var(--clr);
+    transition: 1s;
+    animation: animate 3s linear infinite;
+    content: '';
+}
+
+@keyframes animate {
+    0% {
+    transform: rotate(0deg);
+}
+    100% {
+        transform: rotate(360deg);
+    }
+}
+    
+.box a:hover::before {
+    width: 1000%;
+    height: 100vh;
+    background-color: var(--clr);
+}
+.box a::after {
+
+    display: inline-block;
+    position: absolute;
+    background-color: transparent;
+    inset: 4px;
+    transition: 1s;
+    content: '';
+}
+
+.box a:hover::after {
+    background-color: transparent;
+}
+.box span {
+    z-index: 8;
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0.5;
+    transition: 1s;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    border-radius: 50%;
+}
+.box a:hover span {
+    opacity: 1;
+}
+.foot{
+    background-color: rgb(159, 112, 112);
+    width: 80%;
+    position: relative;
+    margin-left: 10%;
+    border-radius: 2rem;
+}
+.foot-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+}
+.bottom{
+    display: flex;
+    background-color: rgb(79, 67, 67);
+    justify-content: space-around;
+    font-size: 1.4rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@media(width<660px){
+    .join{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 2px;
+    }
+    .foot{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        border-radius: 2px;
+    }
+    .apply-sec .box{
+        order: 3;
+        position: relative;
+        margin-top: 2rem;
+    }
+    .apply-sec{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .heddings p,h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+    }
+}
